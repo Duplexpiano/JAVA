@@ -1,0 +1,36 @@
+package t1;
+
+import java.util.Scanner;
+
+public class test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[] a = new int[n];
+		getPrimeNumbers(n);
+	}
+	public static void printPrimeNumbers(int[] n) {
+		int cnt = 0;
+		int rowLength = 0;
+		}
+	
+	public static int[] getPrimeNumbers(int n){
+
+		int[] result = new int[n];
+		//一系列处理代码
+		result[0] = 0;
+		result[1] = 1;
+		for(int i = 2; i < Math.sqrt(n); i++) {
+			if(result[i] == 0) {
+				for(int j = i*i; j < n; j += i) {
+					result[j] = 1;
+				}
+			}
+		}
+
+		return result;
+
+		}
+}
