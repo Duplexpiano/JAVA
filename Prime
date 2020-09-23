@@ -1,30 +1,31 @@
-package t1;
+package prime;
 
 import java.util.Scanner;
 
-public class test1 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
-		int[] a = new int[n];
-		getPrimeNumbers(n);
-	}
+public class prime {
 	public static void printPrimeNumbers(int[] n) {
 		int cnt = 0;
-		int rowLength = 0;
+		int rowLength = 10;
+		for (int i = 1; i < n.length; i++) {
+			if (n[i] == 0) {
+				if (cnt % rowLength == 0 && cnt != 0) {
+					System.out.println();
+				}
+				cnt++;
+				System.out.print(i + "\t");
+			}
 		}
-	
-	public static int[] getPrimeNumbers(int n){
+	}
+
+	public static int[] getPrimeNumbers(int n) {
 
 		int[] result = new int[n];
-		//一系列处理代码
-		result[0] = 0;
+		// 一系列处理代码
+		result[0] = 1;
 		result[1] = 1;
-		for(int i = 2; i < Math.sqrt(n); i++) {
-			if(result[i] == 0) {
-				for(int j = i*i; j < n; j += i) {
+		for (int i = 2; i < Math.sqrt(n); i++) {
+			if (result[i] == 0) {
+				for (int j = i * i; j < n; j += i) {
 					result[j] = 1;
 				}
 			}
@@ -32,5 +33,13 @@ public class test1 {
 
 		return result;
 
-		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		printPrimeNumbers(getPrimeNumbers(n));
+	}
+
 }
