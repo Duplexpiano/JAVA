@@ -7,6 +7,7 @@ public class gcd {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
+		System.out.println("Input 2 integers:");
 		int m = in.nextInt();
 		int n = in.nextInt();
 		System.out.println("gad:"+gcd(m, n)+"\ngcd_rexursive:"+gcd_recursive(m,n));
