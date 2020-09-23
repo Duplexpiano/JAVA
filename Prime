@@ -40,6 +40,7 @@ public class prime {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		printPrimeNumbers(getPrimeNumbers(n));
+		in.close();
 	}
 
 }
