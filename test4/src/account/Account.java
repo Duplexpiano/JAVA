@@ -8,7 +8,6 @@ public class Account {
 	private LocalDate openDate;
 
 	public Account(String id, double balance, double apr, LocalDate openDate) {
-		super();
 		this.id = id;
 		this.balance = balance;
 		this.apr = apr;
@@ -47,15 +46,17 @@ public class Account {
 		this.openDate = openDate;
 	}
 	
-	public double deposit() {
-		return 0;
+	public double deposit(double money) {
+		setBalance(getBalance() + money);
+		return this.balance;
 	}
-	public double withdraw() {
-		return 0;
+	public double withdraw(double money) {
+		setBalance(getBalance() - money);
+		return this.balance;
 	}
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", balance=" + balance + ", apr=" + apr + ", openDate=" + openDate + "]";
+		return "Account [Id=" + id + ", Balance=" + balance + ", APR=" + apr + ", OpenDate=" + openDate + "]";
 	}
 
 }
