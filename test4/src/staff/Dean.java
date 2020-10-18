@@ -19,6 +19,7 @@ public class Dean extends Teacher {
 		this.adminAward = adminAward;
 	}
 
+	// Ôº³¤Ð½Ë®
 	@Override
 	public double getSalary() {
 		return super.getSalary() + this.adminAward;

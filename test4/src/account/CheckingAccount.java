@@ -13,11 +13,11 @@ public class CheckingAccount extends Account {
 	public double getOverdraftLimit() {
 		return overdraftLimit;
 	}
-	
+
 	public void setOverdraftLimit(double overdraftLimit) {
 		this.overdraftLimit = overdraftLimit;
 	}
-	
+
 ////	@Override
 //	public double deposit(double money) {
 //		return super.getBalance() + money;

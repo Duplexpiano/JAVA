@@ -39,6 +39,7 @@ public class Teacher extends Staff {
 		this.postAllowance = postAllowance;
 	}
 
+	// ½ÌÊ¦Ð½Ë®
 	@Override
 	public double getSalary() {
 		return super.getSalary() + this.postAllowance;

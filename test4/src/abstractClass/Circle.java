@@ -2,7 +2,7 @@ package abstractClass;
 
 public class Circle extends Shape {
 	private double radius;
-	
+
 	public Circle(double PI, double radius) {
 		super();
 		this.radius = radius;
@@ -16,11 +16,13 @@ public class Circle extends Shape {
 		this.radius = radius;
 	}
 
+	// 圆的周长覆盖方法
 	@Override
 	public double getPerimeter() {
 		return 2 * radius * getPi();
 	}
 
+	// 圆的面积覆盖方法
 	@Override
 	public double getArea() {
 		return getPi() * radius * radius;

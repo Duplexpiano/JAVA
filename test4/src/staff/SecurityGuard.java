@@ -29,6 +29,7 @@ public class SecurityGuard extends Staff {
 		this.dangerousAllowance = dangerousAllowance;
 	}
 
+	// ±£°²Ð½Ë®
 	@Override
 	public double getSalary() {
 		return super.getSalary() + this.dangerousAllowance;

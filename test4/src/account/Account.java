@@ -45,15 +45,19 @@ public class Account {
 	public void setOpenDate(LocalDate openDate) {
 		this.openDate = openDate;
 	}
-	
+
+	// ´æ¿î
 	public double deposit(double money) {
 		setBalance(getBalance() + money);
 		return this.balance;
 	}
+
+	// È¡¿î
 	public double withdraw(double money) {
 		setBalance(getBalance() - money);
 		return this.balance;
 	}
+
 	@Override
 	public String toString() {
 		return "Account [Id=" + id + ", Balance=" + balance + ", APR=" + apr + ", OpenDate=" + openDate + "]";

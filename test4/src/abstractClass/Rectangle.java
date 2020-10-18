@@ -3,7 +3,7 @@ package abstractClass;
 public class Rectangle extends Shape {
 	private double length;
 	private double width;
-	
+
 	public Rectangle(double length, double width) {
 		super();
 		this.length = length;
@@ -26,11 +26,13 @@ public class Rectangle extends Shape {
 		this.width = width;
 	}
 
+	// 矩形的周长覆盖方法
 	@Override
 	public double getPerimeter() {
-		return 2 * (length +width);
+		return 2 * (length + width);
 	}
 
+	// 矩形的面积覆盖方法
 	@Override
 	public double getArea() {
 		return length * width;
@@ -68,5 +70,5 @@ public class Rectangle extends Shape {
 	public String toString() {
 		return "Rectangle [length=" + length + ", width=" + width + "]";
 	}
-	
+
 }

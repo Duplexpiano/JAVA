@@ -2,14 +2,14 @@ package abstractClass;
 
 public class Triangle extends Shape {
 	private double a, b, c;
-	
+
 	public Triangle(double a, double b, double c) {
 		super();
 		this.a = a;
 		this.b = b;
 		this.c = c;
 	}
-	
+
 	public double getA() {
 		return a;
 	}
@@ -34,15 +34,17 @@ public class Triangle extends Shape {
 		this.c = c;
 	}
 
+	// 三角形周长覆盖方法
 	@Override
 	public double getPerimeter() {
 		return a + b + c;
 	}
 
+	// 三角形面积覆盖方法
 	@Override
 	public double getArea() {
-		double p = (a + b + c)/2;
-		return Math.sqrt(p*(p-a)*(p-b)*(p-c));
+		double p = (a + b + c) / 2;
+		return Math.sqrt(p * (p - a) * (p - b) * (p - c));
 	}
 
 	@Override
